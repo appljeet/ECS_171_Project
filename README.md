@@ -44,15 +44,23 @@ print(classification_report(y_test, y_pred_test))
 
 ## Model 1
 
-Classification Report from our first model: 
+Classification Report for train data:
 
-![Classification Report Model 1](project_images/Classification%20Report%20-%20Model%201.png)
+![Classification Report Model 1 - Train](project_images/Classification%20Report%20Model%201%20-%20Train.png)
+
+Classifcation Report for test data:
+
+![Classification Report Model 1 - Test](project_images/Classification%20Report%20Model%201%20-%20Test.png)
 
 ## Model 2
 
-Classification Report from our second model:
+Classification Report for train data:
 
-![Classification Report Model 2](project_images/Classification%20Report%20-%20Model%202.png)
+![Classification Report Model 2 - Train](project_images/Classification%20Report%20Model%202%20-%20Train.png)
+
+Classification Report for test data:
+
+![Classification Report Model 2 - Test](project_images/Classification%20Report%20Model%202%20-%20Train.png)
 
 # Discussion
 
@@ -65,6 +73,7 @@ So, from analyzing all the metrics of our Classification Reports, we can safely 
 Our next steps to improve our current underfitting model is to add more complexity to our model. In our first model, we only used one Linear SVC, in the future we plan to use neural networks for classification as well as an RBF SVC. 
 
 ## Model 2
+
 
 
 # Conclusion
