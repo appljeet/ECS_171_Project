@@ -36,8 +36,6 @@ Our Data Pairplot:
     data.columns = ["recency", "frequency", "monetary", "time", "donated"]
     ```
 3. Drop any unnecessary features. We found that the features "frequency" and monetary provide identical information to our model, so we only require one. We chose to drop monetary.
-   
-    ![image](https://user-images.githubusercontent.com/38890728/205831994-719d8529-c60b-4d3e-9bf6-5a4ab063cbac.png)
     ```
     data.drop(columns="monetary", inplace=True)
     ```
@@ -54,6 +52,19 @@ Our Data Pairplot:
     X_train = scaler.transform(X_train)
     X_test = scaler.transform(X_test)
     ```
+
+## Data Exploration
+
+1. Generate pairplot using Seaborn
+    ```
+    sns.pairplot(data)
+    ```
+2. Generate correlation matrix using Seaborn
+    ```
+    correlation_matrix = data.corr()
+    sns.heatmap(correlation_matrix, vmin=-1, vmax=1, center=0, annot=True, cmap = 'RdBu', fmt='.2g'
+    ```
+    ![image](https://user-images.githubusercontent.com/38890728/205831994-719d8529-c60b-4d3e-9bf6-5a4ab063cbac.png)
 
 ## Model 1
 
@@ -94,6 +105,14 @@ Classification Report for test data:
 ![Classification Report Model 2 - Test](project_images/Classification%20Report%20Model%202%20-%20Test.png)
 
 # Discussion
+
+## Preprocessing
+
+- Dataset feature names were renamed to more ideal names for simplicity.
+- After performing an exploratory data analysis, we found that features frequency and monetary provided the same information, with a correlation score of 1.
+- This was due to the fact that the same amount of blood is donated each visit. So the number of visits and the total blood donated are directly proportional to each other.
+- We decided to drop monetary to avoid redundancy.
+- Data was normalized using MinMaxScaler to preserve the underlying distribution of the data.
 
 ## Model 1
 
