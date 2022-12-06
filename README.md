@@ -28,6 +28,9 @@ How Does Model Fit Into Fitting Graph?
 
 Since our dataset represents a classification problem, Classification Report is a good measure of error because we are able to find accuracy, precision, recall, f1-score, and support. 
 
+## Model 2 - SVM with RBF kernel
+
+
 ```
 y_pred_train = model.predict(X_train)
 y_pred_test = model.predict(X_test)
@@ -47,7 +50,7 @@ Classification Report from our first model:
 
 ## Model 2
 
-Classifcation Report from our second model:
+Classification Report from our second model:
 
 ![Classification Report Model 2](project_images/Classification%20Report%20-%20Model%202.png)
 
@@ -60,6 +63,9 @@ When comparing the Classfication Report of our training data vs, testing data, w
 So, from analyzing all the metrics of our Classification Reports, we can safely predict that our model IS underfitted. Our accuracy and precision both scored poorly (below 80%), however we see that the Classification Reports between our training and testing data perform very similarily (each error metric being 1-2% off of each other). 
 
 Our next steps to improve our current underfitting model is to add more complexity to our model. In our first model, we only used one Linear SVC, in the future we plan to use neural networks for classification as well as an RBF SVC. 
+
+## Model 2
+
 
 # Conclusion
 
