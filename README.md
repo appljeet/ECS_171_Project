@@ -2,10 +2,6 @@
 
 # Introduction
 
- - Blood is a crucial resource for life-saving transfusions. Unfortunately, it is often in short supply and blood banks regularly face shortages due to the volunteer-based sourcing of an already scarce resource
- - Using a dataset describing blood donors, we will train a model to predict whether a given patient will donate blood or not based on information like how many times they have previously donated blood and whether they have donated blood recently or not.
- - Such a model could help blood banks and hospitals predict starvation periods and ration resources accordingly.
-
 # Figures
 Our Data Table:
 
@@ -19,33 +15,56 @@ Our Data Pairplot:
 
 ## Data Preprocessing
 
-1. Read in data and drop any NA values.
-2. Rename features to have simpler names.
-3. Drop any unnecessary features.
-4. Scale the data with MinMaxScaler().
-5. Partition into training and test data.
+1. Read in data and drop any NA values. We did not find any, so we did not have to drop any.
 
-## Data Exploration
+    ```
+    data.isna().any()
+    =====================================================
+      Recency (months)                              False
+      Frequency (times)                             False
+      Monetary (c.c. blood)                         False
+      Time (months)                                 False
+      whether he/she donated blood in March 2007    False
+      dtype: bool
+    ```
+2. Rename features to have simpler names. (For example, "whether he/she donated blood in March 2007" -> "donated")
+    ```
+    data.columns = ["recency", "frequency", "monetary", "time", "donated"]
+    ```
+3. Drop any unnecessary features. We found that the features "frequency" and monetary provide identical information to our model, so we only require one. We chose to drop monetary.
+   
+    ![image](https://user-images.githubusercontent.com/38890728/205831994-719d8529-c60b-4d3e-9bf6-5a4ab063cbac.png)
+    ```
+    data.drop(columns="monetary", inplace=True)
+    ```
+4. Partition into training and test data. We decided to use a train/test split of 80/20.
+    ```
+    train, test = train_test_split(data, test_size = .2, random_state = 33)
+    X_train, y_train = train.drop(columns= "donated"), train["donated"]
+    ```
+5. Scale the data with MinMaxScaler().
+    ```
+    scaler = MinMaxScaler()
+    
+    scaler.fit(X_train)
+    X_train = scaler.transform(X_train)
+    X_test = scaler.transform(X_test)
+    ```
 
-1. Generate pairplot using Seaborn
-2. Generate correlation matrix using Seaborn
+## Model 1
 
-## Model 1 - SVC with linear kernel
-
-How Does Model Fit Into Fitting Graph?
-
-Since our dataset represents a classification problem, Classification Report is a good measure of error because we are able to find accuracy, precision, recall, f1-score, and support. 
-
-## Model 2 - SVM with RBF kernel
-
-
+For our first model, we decided to use a Support Vector Classifier (SVC) with linear kernel.
 ```
-y_pred_train = model.predict(X_train)
-y_pred_test = model.predict(X_test)
+model = LinearSVC(dual=False)
+model.fit(X_train, y_train)
+```
 
+## Model 2
 
-print(classification_report(y_train, y_pred_train))
-print(classification_report(y_test, y_pred_test))
+For our second model, we decided on using a Support Vector Machine (SVM) with RBF kernel.
+```
+svm = SVC(kernel = 'rbf')
+svm.fit(X_train,y_train)
 ```
 
 # Results
@@ -87,9 +106,5 @@ When comparing the Classification Report for our training and testing data, we g
 It appears that our model still is underfitted. Our accuracy and precision values both went up from the previous model, leading us to believe that our second model did, in fact, do a better job of correctly predicting whether a person donated blood or not. It's also important to note that our Classification Reports for our training and testing data in Model 2 were still relatively similar.
 
 # Conclusion
-
-- Blood donation can be reliably predicted based on donor information.
-- Lack of data was our greatest limitation, as we only had data from one year. Training the model on data spanning multiple years would likely significantly increase performance.
-- Further research would consist of fitting and evaluating different classification models, as well as obtaining a more robust data set.
 
 # Collaboration
