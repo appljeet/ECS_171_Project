@@ -74,7 +74,9 @@ Our next steps to improve our current underfitting model is to add more complexi
 
 ## Model 2
 
+When comparing the Classification Report for our training and testing data, we get different results than we did from Model 1. Looking at our measures of error, we can clearly see that our values have a greater difference for precision, recall, f1-score, and support, than we had for Model 1. What is apparent about this, though, is that our precision value did go up from our previous model, showing that there was some kind of improvement in our second model. Moreover, our accuracy value did go up by .01%, meaning that our second model did perform slightly better in terms of accuracy than Model 1 did. 
 
+It appears that our model still is underfitted. Our accuracy and precision values both went up from the previous model, leading us to believe that our second model did, in fact, do a better job of correctly predicting whether a person donated blood or not. It's also important to note that our Classification Reports for our training and testing data in Model 2 were still relatively similar.
 
 # Conclusion
 
