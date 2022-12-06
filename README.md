@@ -116,11 +116,15 @@ Classification Report for test data:
 
 ## Model 1
 
+We decided to use a Linear SVM as our first model because our dataset represents a classification problem, and we have a relatively small sample size (<1000). Linear SVMs (and SVMs in general) tend to work better on smaller datasets. Judging from our pairplots and other figures, we see that our dataset is not exactly linearly separable, so we expect our first Linear SVM model to not perform great, however a Linear SVM is a great start to keep building more complex models upon, judging from our Classification Reports and Results. 
+
 When comparing the Classfication Report of our training data vs, testing data, we see that all our measures of error (precision, recall, f1-score, support, and accuracy) are all within <2% of eachother. This tells us that our graph is definitely NOT overfitted, because an overfitted model would mean that our testing data would perform much more poorly than than our training data. However, we can see that our accuracy and precision are both below 80%. This means that our model incorrectly predicted the outcome ~1/5 of the time, and we also classified around the same amount as false positives. 
 
 So, from analyzing all the metrics of our Classification Reports, we can safely predict that our model IS underfitted. Our accuracy and precision both scored poorly (below 80%), however we see that the Classification Reports between our training and testing data perform very similarily (each error metric being 1-2% off of each other). 
 
-Our next steps to improve our current underfitting model is to add more complexity to our model. In our first model, we only used one Linear SVC, in the future we plan to use neural networks for classification as well as an RBF SVC. 
+There are a multitude of reasons why the accuracy of our Linear SVM was so low. The first explanation is our dataset containing variables that have low correlation to our predicted results. Also, our dataset contains a low amount of features (only 3 were used to predict our classification for "donated"!). A low feature count is also another sign of underfitting. We could potentially do Feature Engineering to extract more information from our features using feature creation. Adding more variables would increase the complexity of our model, and potentially solve our problem of underfitting. 
+
+Our next steps to improve our current underfitting model is to add more complexity to our model, either through Feature Engineering, changing the kernel of our SVM, or using a completely different model. In our first model, we only used one Linear SVC, in the future we plan to use neural networks for classification as well as an RBF SVC. 
 
 ## Model 2
 
