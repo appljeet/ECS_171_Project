@@ -138,5 +138,6 @@ It appears that our model still is underfitted. Our accuracy and precision value
 
 - Ibrahim Rizk 917576313
 - Dylan Sun 919962938
-- Michael Kim 918619680
-- Mark Hong 917491553
+- Michael Kim 918619680: Worked on Model #2, worked on the write up (specifically methods section), did some scheduling for the team
+- Mark Hong 917491553: Worked on Model #2 w/ Michael, worked on the write up (specifically figures, discussion, results, and methods)
+- Abhijt Singh 918269124
