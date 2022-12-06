@@ -25,6 +25,10 @@ Our Data Pairplot:
 4. Scale the data with MinMaxScaler().
 5. Partition into training and test data.
 
+## Data Exploration
+
+1. Generate pairplot using Seaborn
+2. Generate correlation matrix using Seaborn
 
 ## Model 1 - SVC with linear kernel
 
