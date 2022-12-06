@@ -2,6 +2,12 @@
 
 # Introduction
 
+ - Blood is a crucial resource for life-saving transfusions. Unfortunately, it is often in short supply and blood banks regularly face shortages due to the volunteer-based sourcing of an already scarce resource
+ - Using a dataset describing blood donors, we will train a model to predict whether a given patient will donate blood or not based on information like how many times they have previously donated blood and whether they have donated blood recently or not.
+ - Such a model could help blood banks and hospitals predict starvation periods and ration resources accordingly.
+
+Using a dat
+
 # Figures
 Our Data Table:
 
