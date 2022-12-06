@@ -2,6 +2,10 @@
 
 # Introduction
 
+- Blood is a crucial resource for life-saving transfusions. Unfortunately, it is often in short supply and blood banks regularly face shortages due to the volunteer-based sourcing of an already scarce resource
+- Using a dataset describing blood donors, we will train a model to predict whether a given patient will donate blood or not based on information like how many times they have previously donated blood and whether they have donated blood recently or not.
+- Such a model could help blood banks and hospitals predict starvation periods and ration resources accordingly.
+
 # Figures
 Our Data Table:
 
@@ -106,5 +110,9 @@ When comparing the Classification Report for our training and testing data, we g
 It appears that our model still is underfitted. Our accuracy and precision values both went up from the previous model, leading us to believe that our second model did, in fact, do a better job of correctly predicting whether a person donated blood or not. It's also important to note that our Classification Reports for our training and testing data in Model 2 were still relatively similar.
 
 # Conclusion
+
+- Blood donation can be reliably predicted based on donor information.
+- Lack of data was our greatest limitation, as we only had data from one year. Training the model on data spanning multiple years would likely significantly increase performance.
+- Further research would consist of fitting and evaluating different classification models, as well as obtaining a more robust data set.
 
 # Collaboration
