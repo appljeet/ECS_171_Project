@@ -140,8 +140,8 @@ It appears that our model still is underfitted. Our accuracy and precision value
 
 # Collaboration
 
-- Ibrahim Rizk 917576313
-- Dylan Sun 919962938L Worked on Model #1, Classification Report for Model #1, Helped With Preprocessing Dataset, worked on discussion
+- Ibrahim Rizk 917576313: Worked on Model #1, worked on data preprocessing, data exploration, model fitting, worked on the write up
+- Dylan Sun 919962938: Worked on Model #1, Classification Report for Model #1, Helped With Preprocessing Dataset, worked on discussion
 - Michael Kim 918619680: Worked on Model #2, worked on the write up (specifically methods section), did some scheduling for the team
-- Mark Hong 917491553: Worked on Model #2 w/ Michael, worked on the write up (specifically figures, discussion, results, and methods)
+- Mark Hong 917491553: Worked on Model #2, worked on the write up (specifically figures, discussion, results, and methods)
 - Abhijt Singh 918269124
