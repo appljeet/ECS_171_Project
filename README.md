@@ -60,7 +60,7 @@ Classification Report for train data:
 
 Classification Report for test data:
 
-![Classification Report Model 2 - Test](project_images/Classification%20Report%20Model%202%20-%20Train.png)
+![Classification Report Model 2 - Test](project_images/Classification%20Report%20Model%202%20-%20Test.png)
 
 # Discussion
 
