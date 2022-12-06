@@ -135,3 +135,8 @@ It appears that our model still is underfitted. Our accuracy and precision value
 - Further research would consist of fitting and evaluating different classification models, as well as obtaining a more robust data set.
 
 # Collaboration
+
+- Ibrahim Rizk 917576313
+- Dylan Sun 919962938
+- Michael Kim 918619680
+- Mark Hong 917491553
