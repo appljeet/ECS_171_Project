@@ -145,4 +145,4 @@ It appears that our model still is underfitted. Our accuracy and precision value
 - Michael Kim 918619680: Worked on Model #2, worked on the write up (specifically methods section), did some scheduling for the team
 - Mark Hong 917491553: Worked on Model #2, worked on the write up (specifically figures, discussion, results, and methods)
 - Abhijt Singh 918269124
-- Harkamal Padda 918729538
+- Harkamal Padda 918729538: Created discord server where we were able to collaborate and exhange information. Looked over the write-ups specifically for     model 2.
